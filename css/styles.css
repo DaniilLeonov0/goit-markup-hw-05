@@ -577,9 +577,10 @@ p {
 }
 
 .field-label {
-    display: block;
-    margin-bottom: 4px;
     font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
 }
 
 
@@ -622,7 +623,7 @@ textarea {
     height: 120px;
     resize: none;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    margin-bottom: 16px;
+    margin-bottom: 0;
 }
 
 
@@ -774,9 +775,11 @@ textarea:focus {
 }
 
 
-.checkbox-text a {
-    color: #4d5ae5;
-    text-decoration: underline;
+.checkbox-text {
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
 }
 
 .hero-button:hover {
@@ -839,4 +842,19 @@ textarea {
     padding: 8px 16px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
+}
+
+.modal-form textarea {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.checkbox-text a {
+    text-decoration: underline;
+    color: #4d5ae5;
+}
+
+
+.checkbox-field {
+    margin-top: 16px;
 }
