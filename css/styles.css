@@ -578,7 +578,7 @@ p {
 
 .field-label {
     font-size: 12px;
-    line-height: 1.33;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
 }
@@ -787,8 +787,10 @@ textarea:focus {
 }
 
 
-.submit-btn:hover {
+.submit-btn:hover,
+.submit-btn:focus {
     background-color: #404bbf;
+    outline: none;
 }
 
 
@@ -855,6 +857,3 @@ textarea {
 }
 
 
-.checkbox-field {
-    margin-top: 16px;
-}
