@@ -427,7 +427,6 @@ p {
 .footer-container {
     display: flex;
     align-items: baseline;
-    gap: 80px;
 }
 
 .footer-text {
@@ -574,7 +573,7 @@ p {
 }
 .form-field {
     display: block;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 .field-label {
@@ -640,12 +639,14 @@ textarea {
 
 .custom-checkbox {
     width: 16px;
-        height: 16px;
-        border: 1px solid #2e2f42;
-        border-radius: 2px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -679,7 +680,8 @@ position: absolute;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
+    gap: 16px;
+    margin-left: auto;
 }
 
 .footer-subscribe-title {
@@ -715,6 +717,7 @@ position: absolute;
     padding: 8px 24px;
     min-width: 165px;
     height: 40px;
+    border: none;
 }
 
 
@@ -736,14 +739,11 @@ position: absolute;
     outline: none;
 }
 
-.input-wrapper input,
-textarea {
-    border: 1px solid rgba(46, 47, 66, 0.4);
-}
 
 .input-wrapper input:focus,
 textarea:focus {
     border-color: #4d5ae5;
+    outline: none;
 }
 
 .input-wrapper input:focus+.input-icon {
@@ -760,7 +760,7 @@ textarea:focus {
 
 .custom-checkbox svg {
     opacity: 0;
-    transition: opacity 0.2s ease;
+    transition: opacity 250ms ease;
 }
 
 
@@ -786,10 +786,6 @@ textarea:focus {
     background-color: #404bbf;
 }
 
-.checkbox-input:checked+.custom-checkbox {
-    background-color: #404bbf;
-    border: none;
-}
 
 .checkbox-input:checked+.custom-checkbox svg {
     opacity: 1;
@@ -810,4 +806,35 @@ textarea:focus {
     height: 8px;
     fill: #2e2f42;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-left {
+    margin-right: 120px;
+}
+
+.footer-right {
+    margin-right: 80px;
+}
+
+.checkbox-input:checked+.custom-checkbox {
+    background-color: #404bbf;
+    border-color: #404bbf;
+}
+
+.input-wrapper input {
+    width: 100%;
+    height: 40px;
+    padding-left: 40px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    resize: none;
+    padding: 8px 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
 }
