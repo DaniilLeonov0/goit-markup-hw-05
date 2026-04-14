@@ -545,8 +545,8 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 1;
-    pointer-events: auto;
+    opacity: 0;
+    pointer-events: none;
     transition: opacity 250ms ease-in-out;
 }
 
@@ -567,7 +567,6 @@ p {
     justify-content: flex-start;
     flex-direction: column;
     gap: 8px;
-    width: 400px;
     position: relative;
 }
 
@@ -579,15 +578,9 @@ p {
     letter-spacing: 0.02em;
     text-align: center;
     margin: 0 auto;
-    color: var(--navy-blue);
+    color: #2E2F42;
 }
 
-
-
-label {
-    display: block;
-    margin-bottom: 10px;
-}
 
 .label-checkbox {
     display: flex;
@@ -601,14 +594,14 @@ label {
 .field-label {
     display: block;
     margin-bottom: 4px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 
 
 .input-icon {
     position: absolute;
-    left: 10px;
+    left: 16px;
     top: 50%;
     transform: translateY(-50%);
     fill: #555;
@@ -638,27 +631,31 @@ textarea {
 
 
 .submit-btn {
-    width: 100%;
+    width: 169px;
+    height: 56px;
     padding: 12px;
-    background: #6c63ff;
+    background-color: #4d5ae5;
     color: #fff;
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    display: block;
+    margin: 0 auto;
 }
 
 
 
 .modal-close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 24;
+    right: 24;
+    background: #e7e9fc;
 }
 
 
 .form-field {
     display: block;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 
@@ -675,7 +672,7 @@ textarea {
 
 .input-icon {
     position: absolute;
-    left: 10px;
+    left: 16x;
     top: 50%;
     transform: translateY(-50%);
     fill: #555;
@@ -687,22 +684,23 @@ textarea {
 
 textarea {
     width: 100%;
-    height: 100px;
+    height: 120px;
     resize: none;
 }
 
 
-.checkbox input {
+.checkbox-input {
     display: none;
 }
 
 .custom-checkbox {
     width: 16px;
-    height: 16px;
-    border: 1px solid #000;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+        height: 16px;
+        border: 1px solid #2e2f42;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 }
 
 .checkbox input:checked+.custom-checkbox {
@@ -735,22 +733,27 @@ textarea {
 .close-icon {
     fill: none;
     stroke: #000;
-
+    gap: 24px;
     transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 .modal-close:hover,
 .modal-close:focus {
-    background: #4d5ae5;
+    background: #404bbf;
 }
 
 .modal-close:hover .close-icon,
 .modal-close:focus .close-icon {
-    stroke: #fff;
+    background-color: #404bbf;
 }
 
 .footer-subscribe {
+display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 24px;
     margin-left: auto;
 }
 
@@ -762,7 +765,11 @@ textarea {
 
 .subscribe-form {
     display: flex;
-    gap: 16px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 24px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 .subscribe-input {
@@ -778,8 +785,10 @@ textarea {
 .subscribe-btn {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 16px;
     padding: 8px 24px;
+    min-width: 165px;
+    height: 40px;
 }
 
 .modal-close {
@@ -800,4 +809,51 @@ textarea {
 
 .input-wrapper {
     position: relative;
+}
+
+.subscribe-input::placeholder {
+    color: #ffffff;
+}
+
+.subscribe-input {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.subscribe-input:focus {
+    border-color: #4d5ae5;
+    outline: none;
+}
+
+.input-wrapper input,
+textarea {
+    border: 1px solid #2e2f42;
+}
+
+.input-wrapper input:focus,
+textarea:focus {
+    border-color: #4d5ae5;
+}
+
+.input-wrapper input:focus+.input-icon {
+    fill: #4d5ae5;
+}
+
+.checkbox-field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.custom-checkbox svg {
+    fill: transparent;
+}
+
+.checkbox-input:checked+.custom-checkbox {
+    background-color: #4d5ae5;
+    border: none;
+}
+
+.checkbox-input:checked+.custom-checkbox svg {
+    fill: #ffffff;
 }
